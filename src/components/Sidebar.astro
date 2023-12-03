@@ -1,13 +1,27 @@
 <aside
   id='aside'
-  class='closed-sidebar z-30 absolute top-0 h-screen w-[80vw] transition-all'
+  class='closed-sidebar z-30 absolute h-full w-[80vw] sm:w-[20vw] pt-2 pl-2 text-white bg-green-yellow-950 transition-all'
 >
   <header class='h-8 flex justify-between items-center'>
-    <h2>Subjects</h2>
-    <button id='btn-close-sidebar' class='px-3 h-full'>Close</button>
+    <h2 class='font-bold'>Subjects</h2>
+    <button id='btn-close-sidebar' class='px-3 h-full'>
+      <svg
+        class='bi bi-layout-sidebar-inset-reverse'
+        fill='currentColor'
+        height='20'
+        viewBox='0 0 16 16'
+        width='20'
+        xmlns='http://www.w3.org/2000/svg'
+        ><path
+          d='M2 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12z'
+        ></path><path
+          d='M13 4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V4z'
+        ></path></svg
+      >
+    </button>
   </header>
-  <nav class='mt-5'>
-    <ul class='flex flex-col gap-y-2'>
+  <nav class='mt-8'>
+    <ul class='flex flex-col gap-y-3'>
       <li><a href='#'>What is Node.js</a></li>
       <li><a href='#'>Modules</a></li>
       <li><a href='#'>Modules</a></li>
@@ -20,9 +34,10 @@
 <style>
   .closed-sidebar {
     width: 0;
+    padding-left: 0;
   }
 
-  .closed-sidebar *:not(#btn-close-sidebar) {
+  .closed-sidebar * {
     transform: translateX(-1000px);
   }
 </style>

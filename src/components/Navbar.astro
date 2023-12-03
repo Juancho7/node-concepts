@@ -1,13 +1,47 @@
-<nav class='relative z-20 flex justify-between items-center'>
-  <button id='btn-open-sidebar'>Open</button>
+<nav
+  class='relative h-nav px-2 flex justify-between items-center text-white bg-green-yellow-950'
+>
+  <button id='btn-open-sidebar'>
+    <svg
+      class='bi bi-layout-sidebar-inset-reverse'
+      fill='currentColor'
+      height='20'
+      viewBox='0 0 16 16'
+      width='20'
+      xmlns='http://www.w3.org/2000/svg'
+      ><path
+        d='M2 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12z'
+      ></path><path
+        d='M13 4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V4z'
+      ></path></svg
+    >
+  </button>
 
   <span class='block ml-5'>Node Concepts</span>
 
-  <button id='btn-navbar-menu' class='sm:hidden'>O</button>
+  <button id='btn-navbar-menu' class='sm:hidden'>
+    <svg
+      class='feather feather-menu'
+      fill='none'
+      height='24'
+      stroke='currentColor'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+      stroke-width='2'
+      viewBox='0 0 24 24'
+      width='24'
+      xmlns='http://www.w3.org/2000/svg'
+      ><line x1='3' x2='21' y1='12' y2='12'></line><line
+        x1='3'
+        x2='21'
+        y1='6'
+        y2='6'></line><line x1='3' x2='21' y1='18' y2='18'></line></svg
+    >
+  </button>
 
   <ul
     id='mobile-menu'
-    class='absolute z-10 top-7 sm:hidden flex gap-x-2 transition-all'
+    class='absolute mobile-menu-top w-full flex justify-center transition-all sm:hidden [&>li>a]:block [&>li>a]:py-[5px] [&>li>a]:px-2 bg-green-yellow-950'
   >
     <li><a href='#'>Resources</a></li>
     <li><a href='#'>Tutorials</a></li>
@@ -20,8 +54,20 @@
 </nav>
 
 <style>
+  :root {
+    --nav-height: 36px;
+  }
+
+  .h-nav {
+    height: var(--nav-height);
+  }
+
+  .mobile-menu-top {
+    top: calc(var(--nav-height));
+  }
+
   .closed-menu {
-    top: -20px;
+    top: calc(var(--nav-height) * -1);
   }
 
   #mobile-menu {
