@@ -1,16 +1,19 @@
 <nav class='relative z-20 flex justify-between items-center'>
   <button id='btn-open-sidebar'>Open</button>
 
-  <span class='block'>Node Concepts</span>
+  <span class='block ml-5'>Node Concepts</span>
 
-  <button id='btn-navbar-menu'>O</button>
+  <button id='btn-navbar-menu' class='sm:hidden'>O</button>
 
-  <ul id='mobile-menu' class='absolute z-10 top-7 flex gap-x-2 transition-all'>
+  <ul
+    id='mobile-menu'
+    class='absolute z-10 top-7 sm:hidden flex gap-x-2 transition-all'
+  >
     <li><a href='#'>Resources</a></li>
     <li><a href='#'>Tutorials</a></li>
   </ul>
 
-  <ul class='flex max-[640px]:hidden'>
+  <ul class='grow max-[640px]:hidden flex justify-end gap-x-5'>
     <li><a href='#'>Resources</a></li>
     <li><a href='#'>Tutorials</a></li>
   </ul>
