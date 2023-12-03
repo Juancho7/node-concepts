@@ -1,6 +1,37 @@
-<nav>
-  <ul>
+<nav class='relative z-20 flex justify-between items-center'>
+  <button id='btn-open-sidebar'>Open</button>
+
+  <span class='block'>Node Concepts</span>
+
+  <button id='btn-navbar-menu'>O</button>
+
+  <ul id='mobile-menu' class='absolute z-10 top-7 flex gap-x-2 transition-all'>
+    <li><a href='#'>Resources</a></li>
+    <li><a href='#'>Tutorials</a></li>
+  </ul>
+
+  <ul class='flex max-[640px]:hidden'>
     <li><a href='#'>Resources</a></li>
     <li><a href='#'>Tutorials</a></li>
   </ul>
 </nav>
+
+<style>
+  .closed-menu {
+    top: -20px;
+  }
+
+  #mobile-menu {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+
+<script>
+  const btnNavbarMenu = document.querySelector('#btn-navbar-menu');
+  const mobileMenu = document.querySelector('#mobile-menu');
+
+  btnNavbarMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('closed-menu');
+  });
+</script>

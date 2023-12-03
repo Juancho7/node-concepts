@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import Sidebar from '../components/Sidebar.astro';
 ---
 
 <html lang='en'>
@@ -12,6 +13,21 @@ import Navbar from '../components/Navbar.astro';
   </head>
   <body>
     <Navbar />
+    <Sidebar />
     <slot />
   </body>
 </html>
+<style is:global>
+  * {
+    outline: 1px solid red;
+  }
+</style>
+
+<script>
+  const btnOpenSidebar = document.querySelector('#btn-open-sidebar');
+  const aside = document.querySelector('#aside');
+
+  btnOpenSidebar.addEventListener('click', () => {
+    aside.classList.toggle('closed-sidebar');
+  });
+</script>
